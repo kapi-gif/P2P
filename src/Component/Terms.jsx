@@ -100,7 +100,7 @@ function Terms() {
                     <header className="text-center py-16 ">
                         <h1 className="text-4xl font-extrabold text-green-800">Terms of Use</h1>
                         <p className="mt-2 text-lg text-green-700 max-w-2xl mx-auto">
-                            These Terms govern your use of the Athene P2P Trading platform. Please read them carefully.
+                            These Terms govern your use of the Piswap P2P Trading platform. Please read them carefully.
                         </p>
                     </header>
 
@@ -113,7 +113,7 @@ function Terms() {
                             "4. Prohibited Activities: Users agree not to engage in any unlawful activities, including money laundering, fraud, or any actions that violate applicable laws.",
                             "5. Platform Usage: Users are responsible for maintaining the confidentiality of their login credentials and for all activities that occur under their account.",
                             "6. Transaction Terms: All transactions are subject to verification and approval by the platform. We reserve the right to refuse any transaction that appears suspicious.",
-                            "7. Intellectual Property: All content on the platform, including logos, designs, and text, is the property of Athene and protected by copyright laws.",
+                            "7. Intellectual Property: All content on the platform, including logos, designs, and text, is the property of Piswap and protected by copyright laws.",
                             "8. Privacy: Your use of the platform is also governed by our Privacy Policy, which outlines how we collect and use your data.",
                             "9. Dispute Resolution: Any disputes arising from the use of the platform will be resolved through binding arbitration in accordance with applicable laws.",
                             "10. Limitation of Liability: Athene will not be held liable for any indirect, incidental, or consequential damages arising out of your use of the platform.",
@@ -139,10 +139,10 @@ function Terms() {
                         </div>
                         <div className="flex justify-between items-center px-8 py-4">
                             <div className="flex space-x-8 font-semibold text-[22px]">
-                                <p>Athene Network</p>
+                                <p>Piswap Network</p>
                                 <p>Download App</p>
-                                <Link to="/privacy" className="hover:underline cursor-pointer">Privacy Policy</Link>
-                                <Link to="/terms-of-use" className="hover:underline cursor-pointer">Terms of Use</Link>
+                                <Link to="/privacy" className=" cursor-pointer">Privacy Policy</Link>
+                                <Link to="/terms-of-use" className=" cursor-pointer">Terms of Use</Link>
                             </div>
                             <div className="flex space-x-8">
                                 {[i1, i2, i3].map((icon, i) => (

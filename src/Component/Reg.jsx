@@ -21,7 +21,7 @@ export const Register = () => {
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
-    <div className="bg-gray-100 min-h-screen font-sans">
+    <div className="bg-gradient-to-r from-purple-300 via-pink-200 to-yellow-200 min-h-screen font-sans">
       {/* Marquee Section */}
       <div className="sticky top-0 z-50 overflow-hidden whitespace-nowrap bg-black text-white py-2">
         <div className="animate-marquee flex space-x-10 px-4 text-sm md:text-base">

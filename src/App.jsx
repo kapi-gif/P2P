@@ -26,6 +26,7 @@ import Home from './Component/Home';
 import { Register } from './Component/Reg.jsx';
 import Privacy from './Component/Privacy.jsx'; 
 import Terms from './Component/Terms.jsx'; 
+import Reg2 from './Component/Reg2.jsx'; 
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/reg2" element={<Reg2 />} />
       </Routes>
     </Router>
   );
