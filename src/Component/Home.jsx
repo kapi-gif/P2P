@@ -107,7 +107,7 @@ const Home = () => {
                 <img src={gi} alt="Logo" />
               </div>
 
-              {/* Second Icon */}
+              
               <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
                 <img src={fl} alt="Logo" />
               </div>
@@ -116,7 +116,7 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        
         {menuOpen && (
           <div className="md:hidden px-4 py-2 bg-white space-y-2">
             <Link to="/register" className="block text-green-600 hover:text-green-800">Register for Listing</Link>
@@ -127,7 +127,7 @@ const Home = () => {
         )}
       </nav>
 
-      {/* Buttons Row */}
+      
       <div className='flex justify-between items-center px-4 md:px-16 mt-2'>
 
         <Link to="/jump">
@@ -138,12 +138,12 @@ const Home = () => {
 
       </div>
 
-      {/* Main Banner */}
+      
       <div className='px-4 md:px-16 mt-4'>
         <img src={main1} alt="Main Banner" className="w-full max-w-[1200px] h-auto mx-auto" />
       </div>
 
-      {/* Image Grid */}
+      
       <div className="flex flex-wrap justify-center gap-4 p-4">
         {[main2, main3, main4, main5].map((img, i) => (
           <img
@@ -156,79 +156,79 @@ const Home = () => {
       </div>
 
 
+
       <div className='bg-white rounded-2xl mx-4 md:mx-16 my-4 p-4 text-black'>
-        <div className="flex flex-wrap items-center gap-20 ml-[20px]">
-          <div className="flex gap-4">
-            <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full ">
-              Buy
-            </button>
-            <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full hover:from-gray-800 hover:to-gray-600 transition">
-              Sell
-            </button>
-          </div>
+      <div className="flex flex-wrap items-center gap-4 md:gap-12 justify-center md:justify-start text-center md:text-left ml-0 md:ml-[20px]">
+  <div className="flex gap-4 md:gap-12 justify-center md:justify-start w-full md:w-auto">
+    <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full ">
+      Buy
+    </button>
+    <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full hover:from-gray-800 hover:to-gray-600 transition">
+      Sell
+    </button>
+  </div>
 
-          {/* PI + Enter Amount Button in same row */}
-          <div className="flex flex-wrap items-center gap-4">
-            {["PI"].map((item, i) => (
-              <button
-                key={i}
-                className="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold hover:from-purple-600 hover:to-indigo-500 transition"
-              >
-                {item}
-              </button>
-            ))}
+  <div className="flex flex-wrap items-center gap-4 md:gap-[36rem] justify-center md:justify-start w-full md:w-auto">
+  <button
+  className="px-4 py-2 rounded-full bg-teal-500 text-white font-semibold hover:bg-teal-600 transition"
+>
+  PI
+</button>
 
-            <div className="mt-4 ml-[600px]">
-              <input
-                type="text"
-                placeholder="Enter Amount USDT"
-                className="border-2 border-gray-400 text-black px-4 py-2 rounded-lg hover:bg-purple-100 "
-              />
-            </div>
 
-          </div>
-        </div>
+    <input
+      type="text"
+      placeholder="Enter Amount USDT"
+      className="border-2 border-gray-400 text-black px-4 py-4 rounded-lg hover:bg-purple-100 w-full sm:w-auto"
+    />
+  </div>
+</div>
 
-        {/* Action Row */}
-        <div className='flex flex-row lg:flex-row justify-between mt-6 gap-4'>
-          {/* You can put action elements here if needed */}
-        </div>
 
-        {/* Table Headings */}
-        <div className="hidden md:grid grid-cols-5 mt-10 border-b-2 border-gray-500 px-4 gap-x-10 font-semibold ml-[20px]">
-          <p>Seller</p>
-          <p>Price</p>
-          <p>Available/Limit</p>
-          <p>Transaction</p>
-          <p></p> {/* Empty for Buy button alignment */}
-        </div>
+  
+  <div className='flex flex-row lg:flex-row justify-between mt-6 gap-4'>
+    
+  </div>
 
-        {/* Seller List */}
-        {[
-          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "GHERBIABDALHAMID", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "hungnguyen0101197999", transactions: "0 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-          { seller: "Waqas_trader", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" }
-        ].map((item, i) => (
-          <div key={i} className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-x-10 mt-4 px-4 border-b pb-4 items-center ml-[20px]">
-            <p>{item.seller}</p>
-            <p>{item.price}</p>
-            <p>{item.available} | {item.limit}</p>
-            <p>{item.transactions}</p>
-            <Link to="/login">
-              <button className="bg-teal-500 text-white px-4 py-2 w-24 rounded-full hover:bg-teal-600 transition text-sm ml-[30px]">
-                Buy
-              </button>
-            </Link>
+  
+  <div className="hidden md:grid grid-cols-5 mt-2 border-b-2 border-gray-500 px-4 gap-x-10 font-semibold ml-[20px]">
+    <p>Seller</p>
+    <p>Price</p>
+    <p>Available/Limit</p>
+    <p>Transaction</p>
+    <p></p>
+  </div>
 
-          </div>
-        ))}
-      </div>
+  
+  {[
+    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "GHERBIABDALHAMID", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "hungnguyen0101197999", transactions: "0 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+    { seller: "Waqas_trader", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" }
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-x-10 mt-4 px-4 border-b pb-4 items-center ml-0 md:ml-[20px] text-center md:text-left"
+    >
+      <p>{item.seller}</p>
+      <p>{item.price}</p>
+      <p>{item.available} | {item.limit}</p>
+      <p>{item.transactions}</p>
+      <Link to="/login">
+        <button className="bg-teal-500 text-white px-4 py-2 w-24 rounded-full hover:bg-teal-600 transition text-sm mx-auto md:ml-[30px]">
+          Buy
+        </button>
+      </Link>
+    </div>
+  ))}
+</div>
+
+
 
 
       <div className="md:ml-[80px] bg-white mt-[50px] max-w-screen-xl w-full rounded-2xl w-dvw md:w-[1200px] text-black">
