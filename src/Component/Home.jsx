@@ -68,55 +68,55 @@ const Home = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="sticky top-[40px] z-40 bg-white shadow-md">
-        <div className="flex justify-between items-center px-4 py-3 md:px-8">
-          <div className="flex items-center space-x-4">
-            <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
+      <nav className="sticky top-[40px] lg:w-dvw z-40 bg-white shadow-md">
+          <div className="md:w-[50vw] flex justify-between items-center px-2 py-3 md:px-8">
             <div className="flex items-center">
-              <span className="font-semibold text-sm md:text-base ml-5 text-[17px] font-semibold">Piswap Network</span>
+              <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
+              <div className="flex items-center">
+                <span className="font-semibold text-sm md:text-base ml-5 text-[17px] font-semibold">Piswap Network</span>
+              </div>
+
+              {/* <span className="font-semibold text-[23px] ">Piswap Network</span> */}
+
+
             </div>
 
-            {/* <span className="font-semibold text-[23px] ">Piswap Network</span> */}
-
-
-          </div>
-
-          {/* Mobile menu icon */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu}>
-              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6 text-sm md:text-base">
-            <div className="mr-[360px] flex items-center gap-x-16 text-[17px] font-semibold">
-              <Link to="/register" className="text-green-600 hover:text-green-800">Register for Listing</Link>
-              <span >More </span>
-            </div>
-
-            <Link to="/login" className=" cursor-pointer grow text-center font-semibold">Login</Link>
-            <Link to="/reg2">
-              <button className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
-                Register
+            {/* Mobile menu icon */}
+            <div className="md:hidden">
+              <button onClick={toggleMenu}>
+                {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
-            </Link>
-            <div className="flex items-center gap-3">
-
-              <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center cursor-pointer hover:bg-gray-300">
-                <img src={gi} alt="Logo" />
-              </div>
-
-              
-              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
-                <img src={fl} alt="Logo" />
-              </div>
             </div>
 
-          </div>
+            {/* Desktop Menu */}
+            <div className="hidden md:flex flex-col items-center md:space-x-6 text-sm md:text-base">
+              <div className="mr-[360px] flex items-center w-[100vh] gap-x-16 text-[17px] font-semibold">
+                <Link to="/register" className="text-green-600 hover:text-green-800">Register for Listing</Link>
+                <span >More </span>
+              </div>
+
+              <Link to="/login" className=" cursor-pointer grow text-center font-semibold">Login</Link>
+              <Link to="/reg2">
+                <button className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
+                  Register
+                </button>
+              </Link>
+              <div className="flex items-center gap-3">
+
+                <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center cursor-pointer hover:bg-gray-300">
+                  <img src={gi} alt="Logo" />
+                </div>
+
+
+                <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
+                  <img src={fl} alt="Logo" />
+                </div>
+              </div>
+
+            </div>
         </div>
 
-        
+
         {menuOpen && (
           <div className="md:hidden px-4 py-2 bg-white space-y-2">
             <Link to="/register" className="block text-green-600 hover:text-green-800">Register for Listing</Link>
@@ -127,7 +127,7 @@ const Home = () => {
         )}
       </nav>
 
-      
+
       <div className='flex justify-between items-center px-4 md:px-16 mt-2'>
 
         <Link to="/jump">
@@ -138,12 +138,12 @@ const Home = () => {
 
       </div>
 
-      
+
       <div className='px-4 md:px-16 mt-4'>
         <img src={main1} alt="Main Banner" className="w-full max-w-[1200px] h-auto mx-auto" />
       </div>
 
-      
+
       <div className="flex flex-wrap justify-center gap-4 p-4">
         {[main2, main3, main4, main5].map((img, i) => (
           <img
@@ -157,81 +157,81 @@ const Home = () => {
 
 
 
-      <div className='bg-white rounded-2xl mx-4 md:mx-16 my-4 p-4 text-black'>
-      <div className="flex flex-wrap items-center gap-4 md:gap-12 justify-center md:justify-start text-center md:text-left ml-0 md:ml-[20px]">
-  <div className="flex gap-4 md:gap-12 justify-center md:justify-start w-full md:w-auto">
-    <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full ">
-      Buy
-    </button>
-    <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full hover:from-gray-800 hover:to-gray-600 transition">
-      Sell
-    </button>
-  </div>
+      <div className='bg-white rounded-2xl mx-4 md:mx-16 my-4 p-4 text-black md:w-[83dvw]'>
+        <div className="flex flex-col flex-wrap items-start gap-4 md:gap-12 justify-center md:justify-start text-center md:text-left ml-0 md:ml-[20px]">
+          <div className="flex gap-4 md:gap-12 justify-center md:justify-start w-full md:w-auto">
+            <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full ">
+              Buy
+            </button>
+            <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full hover:from-gray-800 hover:to-gray-600 transition">
+              Sell
+            </button>
+          </div>
 
-  <div className="flex flex-wrap items-center gap-4 md:gap-[36rem] justify-center md:justify-start w-full md:w-auto">
-  <button
-  className="px-4 py-2 rounded-full bg-teal-500 text-white font-semibold hover:bg-teal-600 transition"
->
-  PI
-</button>
-
-
-    <input
-      type="text"
-      placeholder="Enter Amount USDT"
-      className="border-2 border-gray-400 text-black px-4 py-4 rounded-lg hover:bg-purple-100 w-full sm:w-auto"
-    />
-  </div>
-</div>
+          <div className="flex flex-wrap items-center gap-4 lg:gap-[36rem] justify-center md:justify-start w-full md:w-auto">
+            <button
+              className="px-4 py-2 rounded-full bg-teal-500 text-white font-semibold hover:bg-teal-600 transition"
+            >
+              PI
+            </button>
 
 
-  
-  <div className='flex flex-row lg:flex-row justify-between mt-6 gap-4'>
-    
-  </div>
-
-  
-  <div className="hidden md:grid grid-cols-5 mt-2 border-b-2 border-gray-500 px-4 gap-x-10 font-semibold ml-[20px]">
-    <p>Seller</p>
-    <p>Price</p>
-    <p>Available/Limit</p>
-    <p>Transaction</p>
-    <p></p>
-  </div>
-
-  
-  {[
-    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "GHERBIABDALHAMID", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "hungnguyen0101197999", transactions: "0 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
-    { seller: "Waqas_trader", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" }
-  ].map((item, i) => (
-    <div
-      key={i}
-      className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-x-10 mt-4 px-4 border-b pb-4 items-center ml-0 md:ml-[20px] text-center md:text-left"
-    >
-      <p>{item.seller}</p>
-      <p>{item.price}</p>
-      <p>{item.available} | {item.limit}</p>
-      <p>{item.transactions}</p>
-      <Link to="/login">
-        <button className="bg-teal-500 text-white px-4 py-2 w-24 rounded-full hover:bg-teal-600 transition text-sm mx-auto md:ml-[30px]">
-          Buy
-        </button>
-      </Link>
-    </div>
-  ))}
-</div>
+            <input
+              type="text"
+              placeholder="Enter Amount USDT"
+              className="border-2 border-gray-400 text-black px-4 py-4 rounded-lg hover:bg-purple-100 w-full sm:w-auto"
+            />
+          </div>
+        </div>
 
 
 
+        <div className='flex flex-row lg:flex-row justify-between mt-6 gap-4'>
 
-      <div className="md:ml-[80px] bg-white mt-[50px] max-w-screen-xl w-full rounded-2xl w-dvw md:w-[1200px] text-black">
+        </div>
+
+
+        <div className="hidden md:grid grid-cols-5 mt-2 border-b-2 border-gray-500 px-4 gap-x-10 font-semibold ml-[20px]">
+          <p>Seller</p>
+          <p>Price</p>
+          <p>Available/Limit</p>
+          <p>Transaction</p>
+          <p></p>
+        </div>
+
+
+        {[
+          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "GHERBIAB DALHAMID", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "hungnguy den0101197999", transactions: "0 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "OmkarPi", transactions: "4 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" },
+          { seller: "Waqas_trader", transactions: "2 Transactions", price: "0.88 USDT", available: "76.49 PI", limit: "5–88 USDT" }
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-x-10 mt-4 px-4 border-b pb-4 items-center ml-0 md:ml-[20px] text-center md:text-left"
+          >
+            <p className="text-wrap overflow-wrap w-10">{item.seller}</p>
+            <p className="text-wrap overflow-wrap">{item.price}</p>
+            <p className="text-wrap overflow-wrap">{item.available} | {item.limit}</p>
+            <p className="text-wrap overflow-wrap">{item.transactions}</p>
+            <Link to="/login">
+              <button className="bg-teal-500 text-white px-4 py-2 md:px-6 rounded-full hover:bg-teal-600 transition text-sm mx-auto md:ml-[30px]">
+                Buy
+              </button>
+            </Link>
+          </div>
+        ))}
+      </div>
+
+
+
+
+      <div className="md:ml-[60px] lg:ml-[80px] bg-white mt-[50px] max-w-screen-xl rounded-2xl md:w-[85vw] lg:w-[1200px] text-black">
         <h1 className="text-3xl p-8 font-semibold">How P2P Works</h1>
 
         <div className="flex justify-center items-center gap-4 mt-2">
@@ -246,7 +246,7 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="flex justify-center items-start gap-10 mt-2 py-10 flex-col md:flex-row ml-10">
+        <div className="flex justify-center items-start gap-10 mt-2 py-10 flex-col lg:flex-row ml-10">
           <div className="text-left p-3">
             <img src={w1} alt="My Photo" className="w-[100px] h-auto" />
             <h1 className="text-lg font-semibold mt-4">1. Place an Order</h1>
@@ -275,7 +275,7 @@ const Home = () => {
       </div>
 
 
-      <div className="w-dvw flex md:w-[1200px] md:ml-[76px] text-black">
+      <div className="w-dvw md:w-[85vw] flex lg:w-[1200px] md:ml-[65px] lg:ml-[76px] text-black">
         <div className="bg-white w-full grow max-w-screen-xl mt-[74px] flex items-center justify-between px-4 py-6 rounded-2xl">
 
           <div className="w-dvw md:w-1/2">
@@ -298,7 +298,7 @@ const Home = () => {
       </div>
 
 
-      <div className="w-dvw h-auto md:w-[1200px] md:ml-[76px]">
+      <div className="w-dvw h-auto md:w-[85vw] lg:w-[1200px] md:ml-[70px] lg:ml-[76px]">
         <div className="bg-white w-full max-w-screen-xl sm:p-3 mt-[50px] p-6 rounded-2xl w-[1200px] text-black">
           <h1 className="text-3xl font-bold mb-6 mr-[20px]">FAQ About P2P Trading</h1>
 
@@ -329,8 +329,7 @@ const Home = () => {
 
 
       {/* Footer Section */}
-      <div className='mx-4 sm:mx-auto max-w-7xl mt-10 p-4 sm:p-6  bg-white rounded-lg shadow-md text-black border-2 border-gray-300 '>
-
+      <div className='md:mx-4 md:mx-auto max-w-7xl mt-10 p-4 sm:p-6  bg-white rounded-lg shadow-md text-black border-2 border-gray-300 '>
         {/* 
 
 <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 sm:mb-6"> 

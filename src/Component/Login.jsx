@@ -2,29 +2,27 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../Images/logo1.png';
 import { Menu, X } from 'lucide-react'; // OR use heroicons if you prefer
-
-import i1 from '../Images/icon1.svg'
-import i2 from '../Images/icon2.svg'
-import i3 from '../Images/icon3.svg'
-import gi from '../Images/gift.svg'
-import fl from '../Images/flag.svg'
+import i1 from '../Images/icon1.svg';
+import i2 from '../Images/icon2.svg';
+import i3 from '../Images/icon3.svg';
+import gi from '../Images/gift.svg';
+import fl from '../Images/flag.svg';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const [menuOpen, setMenuOpen] = useState(false);
+    
     const handleLogin = (e) => {
         e.preventDefault();
-        
         console.log('Logging in with', email, password);
     };
-const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
         <div className="bg-green-50 min-h-screen flex flex-col">
             {/* Navbar */}
-
             <div className="sticky top-0 z-50 overflow-hidden whitespace-nowrap bg-black text-white py-2">
                 <div className="animate-marquee flex space-x-16">
                     {Array(2).fill(0).map((_, idx) => (
@@ -50,68 +48,63 @@ const [menuOpen, setMenuOpen] = useState(false);
                     ))}
                 </div>
             </div>
+{/* Navbar */}
+<nav className="sticky top-0 z-40 bg-white shadow-md">
+  <div className="flex justify-between items-center px-4 py-3 md:px-8">
+    <div className="flex items-center space-x-4">
+      <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
+      <div className="flex items-center">
+        <span className="font-semibold text-sm md:text-base ml-5 text-[17px] font-semibold">Piswap Network</span>
+      </div>
+    </div>
 
-          {/* Navbar */}
-      <nav className="sticky top-[40px] z-40 bg-white shadow-md">
-        <div className="flex justify-between items-center px-4 py-3 md:px-8">
-          <div className="flex items-center space-x-4">
-            <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
-            <div className="flex items-center">
-              <span className="font-semibold text-sm md:text-base ml-5 text-[17px] font-semibold">Piswap Network</span>
-            </div>
+    {/* Mobile menu icon (Hamburger) */}
+    <div className="md:hidden">
+      <button onClick={toggleMenu}>
+        {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+    </div>
 
-            
+    {/* Desktop Menu */}
+    <div className="hidden md:flex items-center space-x-6 text-sm md:text-base">
+      <div className="mr-[360px] flex items-center gap-x-16 text-[17px] font-semibold">
+        <Link to="/register" className="text-green-600 hover:text-green-800">Register for Listing</Link>
+        <span>More</span>
+      </div>
 
-
-          </div>
-
-          {/* Mobile menu icon */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu}>
-              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6 text-sm md:text-base">
-            <div className="mr-[360px] flex items-center gap-x-16 text-[17px] font-semibold">
-              <Link to="/register" className="text-green-600 hover:text-green-800">Register for Listing</Link>
-              <span >More </span>
-            </div>
-
-            <Link to="/login" className=" cursor-pointer grow text-center font-semibold">Login</Link>
-            <Link to="/reg2">
-              <button className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
-                Register
-              </button>
-            </Link>
-            <div className="flex items-center gap-3">
-
-              <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center cursor-pointer hover:bg-gray-300">
-                <img src={gi} alt="Logo" />
-              </div>
-
-              {/* Second Icon */}
-              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
-                <img src={fl} alt="Logo" />
-              </div>
-            </div>
-
-          </div>
+      <Link to="/login" className="cursor-pointer grow text-center font-semibold">Login</Link>
+      <Link to="/reg2">
+        <button className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
+          Register
+        </button>
+      </Link>
+      <div className="flex items-center gap-3">
+        <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center cursor-pointer hover:bg-gray-300">
+          <img src={gi} alt="Logo" />
         </div>
 
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden px-4 py-2 bg-white space-y-2">
-            <Link to="/register" className="block text-green-600 hover:text-green-800">Register for Listing</Link>
-            <span className="block">More</span>
-            <span className="block">Login</span>
-            <button className="w-full bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Register</button>
-          </div>
-        )}
-      </nav>
+        {/* Second Icon */}
+        <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
+          <img src={fl} alt="Logo" />
+        </div>
+      </div>
+    </div>
+  </div>
 
-     
+  {/* Mobile Menu (Dropdown) */}
+  {menuOpen && (
+    <div className="md:hidden px-4 py-2 bg-white space-y-2">
+      {/* Links to show only in mobile view */}
+      <Link to="/register" className="block text-green-600 hover:text-green-800">Register for Listing</Link>
+      <Link to="#" className="block">Piswap Network</Link>
+      <Link to="#" className="block">More</Link>
+      <Link to="/login" className="block">Login</Link>
+      <button className="w-full bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Register</button>
+    </div>
+  )}
+</nav>
+
+
             {/* Login Form Section */}
             <div className="flex justify-center items-center flex-grow py-10">
                 <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
@@ -165,7 +158,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             </div>
 
             {/* Footer Section */}
-            <div className='w-full mt-10 p-4 sm:p-6 bg-white rounded-lg shadow-md text-black border-2 border-gray-300'>
+            <div className="w-full mt-10 p-4 sm:p-6 bg-white rounded-lg shadow-md text-black border-2 border-gray-300">
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-3">
 
                     {/* Links Section */}
