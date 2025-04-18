@@ -21,7 +21,7 @@ export const Register = () => {
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
-    <div className="bg-gradient-to-r from-purple-300 via-pink-200 to-yellow-200 min-h-screen font-sans">
+    <div className='bg-gray-100'>
       {/* Marquee Section */}
       <div className="sticky top-0 z-50 overflow-hidden whitespace-nowrap bg-black text-white py-2">
         <div className="animate-marquee flex space-x-10 px-4 text-sm md:text-base">
@@ -49,7 +49,7 @@ export const Register = () => {
       </nav>
 
       {/* Multi-Step Form Section */}
-      <div className="max-w-2xl mx-4 sm:mx-auto mt-10 p-6 sm:p-8 bg-white/80 backdrop-blur-lg shadow-xl rounded-xl border border-gray-200">
+      <div className="max-w-xl mx-4 sm:mx-auto mt-10 p-6 sm:p-8 bg-white/80 backdrop-blur-lg shadow-xl rounded-xl border border-gray-200">
         <h2 className="text-xl sm:text-3xl font-bold text-center mb-8 text-gray-800">Register to List Cryptocurrency</h2>
 
         <div className="flex justify-between mb-8 text-sm font-medium text-gray-500">
@@ -138,30 +138,49 @@ export const Register = () => {
         )}
       </div>
 
+
       {/* Footer Section */}
-      <div className='mx-4 sm:mx-auto max-w-7xl mt-10 p-4 sm:p-6 bg-white rounded-lg shadow-md'>
-        {/* Row 1 */}
-        <div className="flex justify-start mb-4">
-          {/* Logo Placeholder or Footer Heading */}
-        </div>
+      <div className='mx-4 sm:mx-auto max-w-7xl mt-10 p-4 sm:p-6 bg-white rounded-lg shadow-md text-black border-2 border-gray-300 '>
+
+        {/* 
+               
+               <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 sm:mb-6"> 
+                 <img
+                   src={logo1}
+                   alt="logo1"
+                   className="w-[21px] sm:w-[150px] md:w-[180px] object-contain h-[100px]"
+                 />
+               </div> */}
 
         {/* Row 2 */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-          <div className="flex flex-wrap justify-center sm:justify-start gap-4 font-semibold text-sm sm:text-base">
-            <p>Athene Network</p>
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-3"> {/* Reduced gap */}
+
+          {/* Links Section */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-row items-center sm:justify-start gap-3 sm:gap-6 font-semibold text-sm sm:text-base text-center sm:text-left "> {/* Reduced gap */}
+            <p>Piswap Network</p>
             <p>Download App</p>
-            <Link to="/Privacy" className="hover:underline">Privacy Policy</Link>
-            <Link to="/terms-of-use" className="hover:underline">Terms of Use</Link>
+            <Link to="/Privacy">Privacy Policy</Link>
+            <Link to="/terms-of-use">Terms of Use</Link>
           </div>
-          <div className="flex gap-3">
+
+          {/* Icons Section */}
+          <div className="flex gap-4 mt-4 sm:mt-0"> {/* Reduced gap */}
             {[i1, i2, i3].map((icon, idx) => (
-              <div key={idx} className="bg-gray-900 p-2 rounded-full">
-                <img src={icon} alt={`icon${idx}`} className="w-5 h-5" />
+              <div
+                key={idx}
+                className="bg-gray-900 p-3 rounded-full transform transition-transform duration-300 hover:scale-110"
+              >
+                <img
+                  src={icon}
+                  alt={`icon${idx}`}
+                  className="w-5 h-5 sm:w-5 sm:h-5"
+                />
               </div>
             ))}
           </div>
         </div>
       </div>
+
     </div>
   );
 };

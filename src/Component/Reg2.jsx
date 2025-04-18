@@ -29,7 +29,8 @@ function Reg2() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-purple-300 via-pink-200 to-yellow-200">
+    // <div className="bg-gradient-to-r from-purple-300 via-pink-200 to-yellow-200">
+    <div className="bg-gray-100">
       {/* Scrolling Marquee */}
       <div className="sticky top-0 z-50 overflow-hidden whitespace-nowrap bg-black text-white py-2">
         <div className="animate-marquee flex space-x-8 md:space-x-12 lg:space-x-16 text-sm md:text-base px-4">
@@ -65,7 +66,7 @@ function Reg2() {
       </nav>
 
       {/* Registration Form */}
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12 space-y-8 bg-white mt-8 md:mt-12 rounded-2xl shadow">
+      <div className="max-w-xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12 space-y-8 bg-white mt-8 md:mt-12 rounded-2xl shadow">
         <h1 className="text-2xl md:text-3xl font-bold text-center">Register</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -160,32 +161,53 @@ function Reg2() {
           </div>
         </form>
       </div>
-      <div className="w-full max-w-7xl mx-auto mt-20 mb-8 flex flex-col bg-white rounded-lg shadow-md">
-              <div className="flex justify-start p-4">
-                <img src={logo} alt="logo" className="w-36 h-auto ml-4" />
+
+
+
+      {/* Footer Section */}
+      <div className='mx-4 sm:mx-auto max-w-7xl mt-10 p-4 sm:p-6  bg-white  rounded-lg shadow-md text-black border-2 border-gray-300 '>
+
+        {/* 
+     
+     <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 sm:mb-6"> 
+       <img
+         src={logo1}
+         alt="logo1"
+         className="w-[21px] sm:w-[150px] md:w-[180px] object-contain h-[100px]"
+       />
+     </div> */}
+
+        {/* Row 2 */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-3"> {/* Reduced gap */}
+
+          {/* Links Section */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-row items-center sm:justify-start gap-3 sm:gap-6 font-semibold text-sm sm:text-base text-center sm:text-left "> {/* Reduced gap */}
+            <p>Piswap Network</p>
+            <p>Download App</p>
+            <Link to="/Privacy">Privacy Policy</Link>
+            <Link to="/terms-of-use">Terms of Use</Link>
+          </div>
+
+          {/* Icons Section */}
+          <div className="flex gap-4 mt-4 sm:mt-0"> {/* Reduced gap */}
+           {[i1, i2, i3].map((icon, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-900 p-3 rounded-full transform transition-transform duration-300 hover:scale-110"
+              >
+                <img
+                  src={icon}
+                  alt={`icon${idx}`}
+                  className="w-4 h-4 sm:w-5 sm:h-5"
+                />
               </div>
-              <div className="flex justify-between items-center px-8 py-4">
-                <div className="flex space-x-8 font-semibold text-[18px]">
-                  <p>Piswap Network</p>
-                  <p>Download App</p>
-                  <Link to="/privacy" className=" cursor-pointer">Privacy Policy</Link>
-                  <Link to="/terms-of-use" className=" cursor-pointer">Terms of Use</Link>
-                </div>
-                <div className="flex space-x-8">
-                  {[i1, i2, i3].map((icon, i) => (
-                    <div key={i} className="bg-gray-900 p-2 rounded-full transition-transform duration-300 hover:scale-110">
-                      <img
-                        src={icon}
-                        alt={`icon${i + 1}`}
-                        className="w-[35px] h-auto"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
-    
+
   );
 }
 

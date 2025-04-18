@@ -3,10 +3,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../Images/logo1.png';
 
+import i1 from '../Images/icon1.svg'
+import i2 from '../Images/icon2.svg'
+import i3 from '../Images/icon3.svg'
+
+import gi from '../Images/gift.svg'
+import fl from '../Images/flag.svg'
+
 function Privacy() {
   return (
-    <div className="bg-gradient-to-r from-purple-300 via-pink-200 to-yellow-200">
-      {/* Scrolling Marquee */}
+    // <div className="bg-gradient-to-r from-purple-300 via-pink-200 to-yellow-200">
+    <div className="bg-green-50">
       <div className="sticky top-0 z-50 overflow-hidden whitespace-nowrap bg-black text-white py-2">
         <div className="animate-marquee flex space-x-8 md:space-x-12 lg:space-x-16 text-sm md:text-base px-4">
           {[
@@ -43,7 +50,8 @@ function Privacy() {
       </nav>
 
       {/* Privacy Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12 space-y-8 bg-white mt-8 md:mt-12 rounded-2xl shadow">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12 space-y-8 bg-white mt-8 md:mt-12 rounded-2xl shadow text-gray-900">
+
         <h1 className="text-2xl md:text-3xl font-bold text-center">Privacy Policy</h1>
         <p className="text-base md:text-lg leading-relaxed">
           This Privacy Policy describes how Piswap P2P Trading ("Piswap P2P," "we," "us," or "our") collects, uses,
@@ -114,7 +122,55 @@ function Privacy() {
           <p>We may update this Privacy Policy from time to time by posting a revised version on the Piswap P2P. The revised Privacy Policy will be effective as of the date indicated in the updated policy. Your continued use of the Athene P2P after the effective date of the revised Privacy Policy constitutes your acceptance of the changes.</p>
         </section>
       </div>
+
+
+
+      {/* Footer Section */}
+      <div className='mx-4 sm:mx-auto max-w-7xl mt-10 p-4 sm:p-6  bg-white rounded-lg shadow-md text-black border-2 border-gray-300 '>
+
+        {/* 
+      
+      <div className="flex flex-col sm:flex-row items-center gap-2 mb-4 sm:mb-6"> 
+        <img
+          src={logo1}
+          alt="logo1"
+          className="w-[21px] sm:w-[150px] md:w-[180px] object-contain h-[100px]"
+        />
+      </div> */}
+
+        {/* Row 2 */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-3"> {/* Reduced gap */}
+
+          {/* Links Section */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-row items-center sm:justify-start gap-3 sm:gap-6 font-semibold text-sm sm:text-base text-center sm:text-left "> {/* Reduced gap */}
+            <p>Piswap Network</p>
+            <p>Download App</p>
+            <Link to="/Privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Use</Link>
+          </div>
+
+          {/* Icons Section */}
+          <div className="flex gap-4 mt-4 sm:mt-0"> {/* Reduced gap */}
+            {[i1, i2, i3].map((icon, idx) => (
+              <div
+                key={idx}
+                className="bg-gray-900 p-3 rounded-full transform transition-transform duration-300 hover:scale-110"
+              >
+                <img
+                  src={icon}
+                  alt={`icon${idx}`}
+                  className="w-6 h-6 sm:w-7 sm:h-7"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
     </div>
+
+
+
   );
 }
 
