@@ -63,64 +63,68 @@ function Jump() {
             </div>
 
           {/* Navbar */}
-              <nav className="sticky top-[40px] z-40 bg-white shadow-md">
-                <div className="flex justify-between items-center px-4 py-3 md:px-8">
-                  <div className="flex items-center space-x-4">
-                    <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
-                    <div className="flex items-center">
-                      <span className="font-semibold text-sm md:text-base ml-5 text-[17px] font-semibold">Piswap Network</span>
-                    </div>
-        
-                    {/* <span className="font-semibold text-[23px] ">Piswap Network</span> */}
-        
-        
-                  </div>
-        
-                  {/* Mobile menu icon */}
-                  <div className="md:hidden">
-                    <button onClick={toggleMenu}>
-                      {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                    </button>
-                  </div>
-        
-                  {/* Desktop Menu */}
-                  <div className="hidden md:flex items-center space-x-6 text-sm md:text-base">
-                    <div className="mr-[360px] flex items-center gap-x-16 text-[17px] font-semibold">
-                      <Link to="/register" className="text-green-600 hover:text-green-800">Register for Listing</Link>
-                      <span >More </span>
-                    </div>
-        
-                    <Link to="/login" className=" cursor-pointer grow text-center font-semibold">Login</Link>
-                    <Link to="/reg2">
-                      <button className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
-                        Register
-                      </button>
-                    </Link>
-                    <div className="flex items-center gap-3">
-        
-                      <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center cursor-pointer hover:bg-gray-300">
-                        <img src={gi} alt="Logo" />
-                      </div>
-        
-                      {/* Second Icon */}
-                      <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
-                        <img src={fl} alt="Logo" />
-                      </div>
-                    </div>
-        
-                  </div>
-                </div>
-        
-                {/* Mobile Menu */}
-                {menuOpen && (
-                  <div className="md:hidden px-4 py-2 bg-white space-y-2">
-                    <Link to="/register" className="block text-green-600 hover:text-green-800">Register for Listing</Link>
-                    <span className="block">More</span>
-                    <span className="block">Login</span>
-                    <button className="w-full bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">Register</button>
-                  </div>
-                )}
-              </nav>
+                 <nav className="sticky top-10 z-40 w-full bg-white shadow-lg">
+                     <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:py-1 lg:py-4 md:px-10">
+                         {/* Logo and Name */}
+                         <div className="flex items-center space-x-3">
+                             {/* Replace with your logo if needed */}
+                             <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
+                             <span className="text-xl md:text-lg lg:text-2xl font-bold text-gray-800 tracking-wide">
+                                 Piswap Network
+                             </span>
+                         </div>
+         
+                         {/* Mobile Menu Icon Placeholder */}
+                         <div className="md:hidden">
+                             <button aria-label="Open menu" className="text-gray-700 hover:text-gray-900">
+                                 <svg
+                                     className="w-6 h-6"
+                                     fill="none"
+                                     stroke="currentColor"
+                                     viewBox="0 0 24 24"
+                                 >
+                                     <path
+                                         strokeLinecap="round"
+                                         strokeLinejoin="round"
+                                         strokeWidth={2}
+                                         d="M4 6h16M4 12h16M4 18h16"
+                                     />
+                                 </svg>
+                             </button>
+                         </div>
+         
+                         {/* Desktop Menu */}
+                         <div className="hidden md:flex items-center space-x-10 text-base font-medium text-gray-700">
+                             <Link
+                                 to="/register"
+                                 className="text-green-600 hover:text-green-700 transition text-sm"
+                             >
+                                 Register for Listing
+                             </Link>
+                             <Link to="#" className="hover:text-gray-900">
+                                 More
+                             </Link>
+                             <Link to="/login" className="hover:text-gray-900">
+                                 Login
+                             </Link>
+                             <Link to="/reg2">
+                                 <button className="bg-gray-900 text-white px-5 py-2 rounded-full hover:bg-gray-800 transition-all">
+                                     Register
+                                 </button>
+                             </Link>
+         
+                             {/* Icons */}
+                             <div className="flex items-center space-x-3 ml-4">
+                                 <div className="w-9 h-9 rounded-full bg-neutral-900 flex items-center justify-center hover:bg-gray-300 transition-all">
+                                     <img src={gi} alt="Logo" />
+                                 </div>
+                                 <div className="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition-all">
+                                     <img src={fl} alt="Logo" />
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </nav>
         
               {/* Buttons Row */}
               <div className='flex justify-between items-center px-4 md:px-16 mt-2'>

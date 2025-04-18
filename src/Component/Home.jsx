@@ -68,55 +68,55 @@ const Home = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="sticky top-[40px] lg:w-dvw z-40 bg-white shadow-md">
-          <div className="md:w-[50vw] flex justify-between items-center px-2 py-3 md:px-8">
+      <nav className="sticky top-[40px] z-40 bg-white shadow-md">
+        <div className="flex justify-between items-center px-4 py-3 md:px-8">
+          <div className="flex items-center space-x-4">
+            <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
             <div className="flex items-center">
-              <img src={logo} alt="Logo" className="w-[100px] md:w-[140px]" />
-              <div className="flex items-center">
-                <span className="font-semibold text-sm md:text-base ml-5 text-[17px] font-semibold">Piswap Network</span>
-              </div>
-
-              {/* <span className="font-semibold text-[23px] ">Piswap Network</span> */}
-
-
+              <span className="font-semibold text-sm md:text-base ml-5 text-[17px] font-semibold">Piswap Network</span>
             </div>
 
-            {/* Mobile menu icon */}
-            <div className="md:hidden">
-              <button onClick={toggleMenu}>
-                {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {/* <span className="font-semibold text-[23px] ">Piswap Network</span> */}
+
+
+          </div>
+
+          {/* Mobile menu icon */}
+          <div className="md:hidden">
+            <button onClick={toggleMenu}>
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-6 text-sm md:text-base">
+            <div className="mr-[360px] flex items-center gap-x-16 text-[17px] font-semibold">
+              <Link to="/register" className="text-green-600 hover:text-green-800">Register for Listing</Link>
+              <span >More </span>
+            </div>
+
+            <Link to="/login" className=" cursor-pointer grow text-center font-semibold">Login</Link>
+            <Link to="/reg2">
+              <button className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
+                Register
               </button>
-            </div>
+            </Link>
+            <div className="flex items-center gap-3">
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex flex-col items-center md:space-x-6 text-sm md:text-base">
-              <div className="mr-[360px] flex items-center w-[100vh] gap-x-16 text-[17px] font-semibold">
-                <Link to="/register" className="text-green-600 hover:text-green-800">Register for Listing</Link>
-                <span >More </span>
+              <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center cursor-pointer hover:bg-gray-300">
+                <img src={gi} alt="Logo" />
               </div>
 
-              <Link to="/login" className=" cursor-pointer grow text-center font-semibold">Login</Link>
-              <Link to="/reg2">
-                <button className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition">
-                  Register
-                </button>
-              </Link>
-              <div className="flex items-center gap-3">
-
-                <div className="w-8 h-8 rounded-full bg-neutral-900 flex items-center justify-center cursor-pointer hover:bg-gray-300">
-                  <img src={gi} alt="Logo" />
-                </div>
-
-
-                <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
-                  <img src={fl} alt="Logo" />
-                </div>
+              {/* Second Icon */}
+              <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center cursor-pointer hover:bg-gray-300 mr-[40px]">
+                <img src={fl} alt="Logo" />
               </div>
-
             </div>
+
+          </div>
         </div>
 
-
+        {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden px-4 py-2 bg-white space-y-2">
             <Link to="/register" className="block text-green-600 hover:text-green-800">Register for Listing</Link>
@@ -127,16 +127,11 @@ const Home = () => {
         )}
       </nav>
 
-
-      <div className='flex justify-between items-center px-4 md:px-16 mt-2'>
-
-        <Link to="/jump">
-          <button className="bg-yellow-400 text-black px-4 py-2 rounded-3xl ml-2 font-semibold mt-2">
-            Jumpstart
-          </button>
-        </Link>
-
-      </div>
+      <Link to="/jump">
+        <button className="bg-yellow-400 text-black px-4 py-2 rounded-3xl ml-2 font-semibold mt-2 ml-20">
+          Jumpstart
+        </button>
+      </Link>
 
 
       <div className='px-4 md:px-16 mt-4'>
@@ -157,32 +152,34 @@ const Home = () => {
 
 
 
-      <div className='bg-white rounded-2xl mx-4 md:mx-16 my-4 p-4 text-black md:w-[83dvw]'>
-        <div className="flex flex-col flex-wrap items-start gap-4 md:gap-12 justify-center md:justify-start text-center md:text-left ml-0 md:ml-[20px]">
-          <div className="flex gap-4 md:gap-12 justify-center md:justify-start w-full md:w-auto">
-            <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full ">
-              Buy
-            </button>
-            <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full hover:from-gray-800 hover:to-gray-600 transition">
-              Sell
-            </button>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4 lg:gap-[36rem] justify-center md:justify-start w-full md:w-auto">
-            <button
-              className="px-4 py-2 rounded-full bg-teal-500 text-white font-semibold hover:bg-teal-600 transition"
-            >
-              PI
-            </button>
 
 
-            <input
-              type="text"
-              placeholder="Enter Amount USDT"
-              className="border-2 border-gray-400 text-black px-4 py-4 rounded-lg hover:bg-purple-100 w-full sm:w-auto"
-            />
-          </div>
-        </div>
+      <div className='bg-white rounded-2xl mx-4 md:mx-16 my-4 p-4 text-black md:w-[88dvw] transform md:translate-x-4'>
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-12 justify-between md:justify-start text-center md:text-left ml-0 md:ml-[20px] w-full">
+  {/* Left side buttons: Buy, Sell, PI */}
+  <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-center md:justify-start">
+    <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full">
+      Buy
+    </button>
+    <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 py-2 rounded-full">
+      Sell
+    </button>
+    <button className="px-4 py-2 rounded-full bg-teal-500 text-white font-semibold hover:bg-teal-600 transition">
+      PI
+    </button>
+
+    {/* Mobile View: Enter Amount below Buy and Sell */}
+    <div className="mt-4 md:mt-0 w-full md:w-auto flex justify-center md:justify-end">
+      <input
+        type="text"
+        placeholder="Enter Amount USDT"
+        className="border-2 border-gray-400 text-black px-4 py-2 rounded-lg hover:bg-purple-100 w-full max-w-[220px]"
+      />
+    </div>
+  </div>
+</div>
+
+
 
 
 
@@ -215,7 +212,7 @@ const Home = () => {
             key={i}
             className="grid grid-cols-1 md:grid-cols-5 gap-y-2 md:gap-x-10 mt-4 px-4 border-b pb-4 items-center ml-0 md:ml-[20px] text-center md:text-left"
           >
-            <p className="text-wrap overflow-wrap w-10">{item.seller}</p>
+            <p className="text-wrap overflow-wrap w-10 w-full flex-start">{item.seller}</p>
             <p className="text-wrap overflow-wrap">{item.price}</p>
             <p className="text-wrap overflow-wrap">{item.available} | {item.limit}</p>
             <p className="text-wrap overflow-wrap">{item.transactions}</p>
